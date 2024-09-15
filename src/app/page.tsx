@@ -17,11 +17,7 @@ interface Project {
   icon: React.ReactNode;
 }
 
-interface FuturisticPortfolioProps {
-  name: string;
-}
-
-const FuturisticPortfolio: React.FC<FuturisticPortfolioProps> = ({ name }) => {
+const FuturisticPortfolio = () => {
   const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
@@ -215,9 +211,7 @@ const FuturisticPortfolio: React.FC<FuturisticPortfolioProps> = ({ name }) => {
             darkMode ? "text-gray-400" : "text-gray-600"
           }`}
         >
-          <p>
-            &copy; {new Date().getFullYear()} {name}. All rights reserved.
-          </p>
+          <p>&copy; {new Date().getFullYear()} All rights reserved.</p>
         </footer>
       </div>
     </div>
